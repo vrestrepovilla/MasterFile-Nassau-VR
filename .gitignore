@@ -1,0 +1,12 @@
+node_modules
+.next
+.env.local
+.env*.local
+npm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
+
+# Referencia vieja / respaldos locales - ya no hacen falta porque los datos viven en Postgres/Drive
+Vendors-*.zip
+Cay_Building_Compras_2026.xlsx
+Nassau_Master_File_2026.xlsx

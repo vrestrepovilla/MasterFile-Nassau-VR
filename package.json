@@ -1,0 +1,39 @@
+{
+  "name": "cay-building-compras",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "migrate": "node scripts/migrate.mjs",
+    "setup-inbox": "node scripts/setup-inbox.mjs",
+    "import-master-file": "node scripts/import-master-file.mjs",
+    "import-nassau-master-file": "node scripts/import-nassau-master-file.mjs",
+    "sync-nassau-odoo": "node scripts/sync-nassau-odoo.mjs",
+    "sync-nassau-invoices": "node scripts/sync-nassau-invoices.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "googleapis": "^180.0.0",
+    "jszip": "^3.10.2",
+    "next": "16.3.3",
+    "pdf-lib": "^1.17.1",
+    "pdf2json": "^4.1.0",
+    "pg": "8.13.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11",
+    "@types/pg": "8.11.10",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "autoprefixer": "10.4.20",
+    "dotenv": "16.4.5",
+    "postcss": "8.5.26",
+    "tailwindcss": "3.4.14",
+    "typescript": "5.6.3"
+  }
+}
