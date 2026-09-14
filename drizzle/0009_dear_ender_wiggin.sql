@@ -1,0 +1,1 @@
+ALTER TABLE "purchase_invoices" ADD COLUMN "doc_type" text DEFAULT 'invoice' NOT NULL;

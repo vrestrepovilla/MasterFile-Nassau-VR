@@ -1,0 +1,1 @@
+ALTER TABLE "broker_invoices" ADD COLUMN "ci_number" text;

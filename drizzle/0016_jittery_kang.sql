@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "read_only_department" "department";

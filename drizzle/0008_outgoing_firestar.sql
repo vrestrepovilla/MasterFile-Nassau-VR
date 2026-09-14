@@ -1,0 +1,13 @@
+CREATE TABLE "purchase_invoices" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"purchase_id" integer NOT NULL,
+	"file_name" text NOT NULL,
+	"mime_type" text NOT NULL,
+	"file_size" integer NOT NULL,
+	"file_data" text NOT NULL,
+	"uploaded_by" integer,
+	"uploaded_at" timestamp DEFAULT now() NOT NULL
+);
+--> statement-breakpoint
+ALTER TABLE "purchase_invoices" ADD CONSTRAINT "purchase_invoices_purchase_id_purchases_id_fk" FOREIGN KEY ("purchase_id") REFERENCES "public"."purchases"("id") ON DELETE cascade ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "purchase_invoices" ADD CONSTRAINT "purchase_invoices_uploaded_by_users_id_fk" FOREIGN KEY ("uploaded_by") REFERENCES "public"."users"("id") ON DELETE set null ON UPDATE no action;

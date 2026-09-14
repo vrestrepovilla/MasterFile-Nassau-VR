@@ -1,0 +1,1 @@
+ALTER TABLE "nassau_invoice_matches" ADD CONSTRAINT "nassau_invoice_matches_agentmail_message_id_agentmail_attachment_id_unique" UNIQUE("agentmail_message_id","agentmail_attachment_id");

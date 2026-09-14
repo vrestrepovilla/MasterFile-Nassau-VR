@@ -1,0 +1,32 @@
+CREATE TABLE "purchases" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"source" text DEFAULT 'manual' NOT NULL,
+	"vendor" text,
+	"account" text,
+	"invoice_number" text,
+	"po_number" text,
+	"amount" numeric(12, 2),
+	"status" text,
+	"due_date" date,
+	"paid_on" date,
+	"payment_method" text,
+	"lead_time_in_freight" date,
+	"freight_vendor" text,
+	"warehouse_receipt_number" text,
+	"received_on" date,
+	"weight_lb" numeric(12, 2),
+	"volume_ft3" numeric(12, 2),
+	"comm_invoice_number" text,
+	"ci_status" text,
+	"project" text,
+	"sub_project" text,
+	"notes" text,
+	"pay_app" text,
+	"shipping_mode" text,
+	"container_number" text,
+	"created_by" integer,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+--> statement-breakpoint
+ALTER TABLE "purchases" ADD CONSTRAINT "purchases_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE set null ON UPDATE no action;

@@ -1,0 +1,1 @@
+ALTER TABLE "purchases" ADD COLUMN "procurement_row_number" integer;
